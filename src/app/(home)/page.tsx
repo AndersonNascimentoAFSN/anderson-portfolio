@@ -20,7 +20,7 @@ export default function Home() {
             <p
               className="max-w-[500px] mb-9 text-white/80"
             >
-              I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.
+              A passionate software developer with a love for technology, specializing in front-end development using Next.js and React. Enthusiastic about front-end testing, always striving to deliver high-quality, robust user experiences.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
