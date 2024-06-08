@@ -3,40 +3,18 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const links = [
-  {
-    id: "1",
-    name: 'home',
-    path: '/'
-  },
-  {
-    id: "2",
-    name: 'services',
-    path: '/services'
-  },
-  {
-    id: "3",
-    name: 'resume',
-    path: '/resume'
-  },
-  {
-    id: "4",
-    name: 'work',
-    path: '/work'
-  },
-  {
-    id: "5",
-    name: 'contact',
-    path: '/contact'
-  },
-]
+import { MENU_LINKS } from '@/consts/menu-links'
 
-export function Nav() {
+export interface NavProps {
+  type?: "mobile" | "desktop"
+}
+
+export function Nav({ type = "desktop" }: NavProps) {
   const pathname = usePathname()
 
   return (
-    <nav className='flex gap-8'>
-      {links.map((link) => {
+    <nav className={`flex gap-8 ${type === "mobile" && 'flex-col justify-center items-center'}`}>
+      {MENU_LINKS.map((link) => {
         return <Link
           key={link.id}
           href={link.path}

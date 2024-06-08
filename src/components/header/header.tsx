@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Nav } from "@/components/nav/nav"
+import { MobileNav } from "@/components/mobile-nav/mobile-nav"
 
 export function Header() {
   return (
@@ -23,7 +24,7 @@ export function Header() {
 
         {/* Mobile nav */}
         <div className="sm:hidden">
-          Mobile nav
+          <MobileNav />
         </div>
       </div>
     </header>
