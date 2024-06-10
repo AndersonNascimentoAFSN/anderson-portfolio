@@ -1,7 +1,9 @@
+import { WorkCard } from "@/components/work-card/work-card";
+
 export default function WorkPage() {
   return (
-    <div>
-      WorkPage
-    </div>
+    <>
+      <WorkCard />
+    </>
   )
 }
